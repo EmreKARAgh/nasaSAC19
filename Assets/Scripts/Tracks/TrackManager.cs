@@ -189,7 +189,7 @@ public class TrackManager : MonoBehaviour
 			characterController.coins = 0;
 			characterController.premium = 0;
         
-            m_Score = 0;
+            m_Score = 2019;
 			m_ScoreAccum = 0;
 
             m_SafeSegementLeft = k_StartingSafeSegments;
@@ -281,7 +281,7 @@ public class TrackManager : MonoBehaviour
 			return;
 
 		float scaledSpeed = m_Speed * Time.deltaTime;
-		m_ScoreAccum += scaledSpeed;
+		m_ScoreAccum += scaledSpeed/100;
 		m_CurrentZoneDistance += scaledSpeed;
 
 		int intScore = Mathf.FloorToInt(m_ScoreAccum);
